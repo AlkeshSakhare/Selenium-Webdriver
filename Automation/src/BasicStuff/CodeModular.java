@@ -1,4 +1,5 @@
 package BasicStuff;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -27,20 +28,18 @@ public class CodeModular
     {
 	if (browser.equalsIgnoreCase("firefox"))
 	{
-	    System.setProperty("webdriver.gecko.driver",
-	            "D:\\Alkesh\\Job Prep\\Selenium\\geckodriver-v0.18.0-win32\\geckodriver.exe");
+	    System.setProperty("webdriver.gecko.driver", "C:\\geckodriver.exe");
 	    driver = new FirefoxDriver();
 	}
 	else if (browser.equalsIgnoreCase("chrome"))
 	{
-	    System.setProperty("webdriver.chrome.driver",
-	            "D:\\Alkesh\\Job Prep\\Selenium\\chromedriver_win32\\chromedriver.exe");
+	    System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 	    driver = new ChromeDriver();
 	    driver.manage().window().maximize();
 	}
 	else if (browser.equalsIgnoreCase("ie"))
 	{
-	    String IEDriverLocation = "D:\\Alkesh\\Job Prep\\Selenium\\IEDriverServer_Win32_3.9.0\\IEDriverServer.exe";
+	    String IEDriverLocation = "C:\\IEDriverServer.exe";
 	    System.setProperty("webdriver.ie.driver", IEDriverLocation);
 	    driver = new InternetExplorerDriver();
 	}

@@ -41,20 +41,18 @@ public class PropCodeMode
     {
 	if (browser.equalsIgnoreCase("firefox"))
 	{
-	    System.setProperty("webdriver.gecko.driver",
-	            "D:\\Alkesh\\Job Prep\\Selenium\\geckodriver-v0.18.0-win32\\geckodriver.exe");
+	    System.setProperty("webdriver.gecko.driver", "C:\\geckodriver.exe");
 	    driver = new FirefoxDriver();
 	}
 	else if (browser.equalsIgnoreCase("chrome"))
 	{
-	    System.setProperty("webdriver.chrome.driver",
-	            "D:\\Alkesh\\Job Prep\\Selenium\\chromedriver_win32\\chromedriver.exe");
+	    System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 	    driver = new ChromeDriver();
 	    driver.manage().window().maximize();
 	}
 	else if (browser.equalsIgnoreCase("ie"))
 	{
-	    String IEDriverLocation = "D:\\Alkesh\\Job Prep\\Selenium\\IEDriverServer_Win32_3.9.0\\IEDriverServer.exe";
+	    String IEDriverLocation = "C:\\IEDriverServer.exe";
 	    System.setProperty("webdriver.ie.driver", IEDriverLocation);
 	    driver = new InternetExplorerDriver();
 	}
@@ -69,7 +67,7 @@ public class PropCodeMode
     
     public static void runTest()
     {
-	driver.get("https://www.seleniumhq.org/");
+	driver.get("https://www.seleniumhq.org");
     }
     
 }
